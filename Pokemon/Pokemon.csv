@@ -1,7 +1,7 @@
-Pokemon,Hp,Type,Weakness,# of moves,Move 1,Atk power,Energy,Move 2,Atk Power,Energy,Move 3,Atk Power,Energy,Move 4,Atk power,Energy,Defence
-Blastoise,50,Water,Grass,4,hydro Pump,10,10,Crunch,12,15,Skull Bash,8,8,Hydro Canon,15,20,1
-Venasaur,45,Grass,Fire,4,Frenzy Plant,15,20,Vine Whip,8,8,Tackle,10,10,Grass Knot,12,12,2
-Infernape,40,Fire,Water,4,Fire Punch,10,8,Close Combat,10,12,Blast Burn,15,20,Dig,12,15,3
-Tortterra,45,Grass,Fire,4,Earthquake,12,12,Bite,8,8,Giga Drain,15,20,Razor Leaf,10,10,2
-Empoleon,50,Water,Grass,4,Surf,10,10,Aqua jet,12,12,Water Gun,8,8,Peck,15,20,1
-Charizard,40,Fire,Water,4,Flamethrower,15,8,Scratch,8,8,Seismic Toss,10,12,Fire Tail,12,12,3
+Pokemon,Hp,Type,Resistance,Weakness,# of moves,Move 1,Atk power,Energy,Move 2,Atk Power,Energy,Move 3,Atk Power,Energy,Move 4,Atk power,Energy,Defence
+Blastoise,50,Water,Fire,Grass,4,hydro Pump,10,10,Crunch  ,12,15,Skull Bash,8,8,Hydro Canon,15,20,1
+Venasaur,45,Grass,Water,Fire,4,Frenzy Plant,15,20,Vine Whip,8,8,Tackle    ,10,10,Grass Knot,12,12,2
+Infernape,40,Fire,Grass,Water,4,Fire Punch,10,8,Close Combat,10,12,Blast Burn,15,20,Dig         ,12,15,3
+Tortterra,45,Grass,Water,Fire,4,Earthquake,12,12,Bite      ,8,8,Giga Drain,15,20,Razor Leaf,10,10,2
+Empoleon,50,Water,Fire,Grass,4,Surf     ,10,10,Aqua jet,12,12,Water Gun,8,8,Peck    ,15,20,1
+Charizard,40,Fire,Grass,Water,4,Flamethrower,15,8,Scratch,8,8,Seismic Toss,10,12,Fire Tail,12,12,3

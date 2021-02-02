@@ -1,71 +1,58 @@
+/*
+  Pokemon.java
+  Group: Zhiyang and Rayyan
+  Teacher: Mr Chu
+  Date: January 24, 2021
+  Assignment: Final Project (Pokemon Class)
+*/
+
+/// Imports everything
 import java.util.*;
 
-//PLAN: This class is the pokemon constructor it is what is used to make the pokemon
-//This class esentailly holds all th eimportant attributes of the pokemon (i.e. health)
-
-//NOTE: When adding weakness and resistance, add fields called weakness and resistance and intilize them in class
-//(You might have to add the resistance to the csv file)
-
-public class Pokemon{
+class Pokemon{
   
   //Fields
-  public static String[] types = {"Fire", "Water", "Grass"};  
+  public static String[] types = {"Fire","Water","Grass"};
   private String pkmName;
-  private int hp;
-  private int maxHp;
   private String pkmType;
   private int numAtks;
-  public ArrayList<Move>moves;
-  private int defense;
+  public ArrayList<Move> moves;
+  private String weakness;
+  private String resistance;
   
   //Constructor
-  //The idea here is that the data paramater is a string reading from all of the file
-  //It then splits the data and initializes each characteristic (i.e. gives the pkmn name)
   public Pokemon(String data){
-   String[] dataArr = data.split(",");
-   pkmName = dataArr[0];
-   hp = Integer.parseInt(dataArr[1]);
-   maxHp = hp;
-   pkmType = dataArr[2];
-   numAtks = Integer.parseInt(dataArr[4]);
-   defense = Integer.parseInt(dataArr[17]);
-   
-   moves = new ArrayList<Move>();
-   for(int i=0;i<numAtks;i++){
-    Move temp = new Move(dataArr, i*3);
-    moves.add(temp);
-   }
+    
+    String[] dataArr = data.split(",");
+
+    pkmName = dataArr[0];
+    pkmType = dataArr[2];
+    resistance = dataArr[3];
+    weakness = dataArr[4];
+    numAtks = Integer.parseInt(dataArr[5]);
+    
+    moves = new ArrayList<Move>();
+
+    for(int i=0;i<numAtks;i++){
+      Move temp = new Move(dataArr, i*3);
+      moves.add(temp);
+    }
   }
   
-  //Getters and Setters are below
-  
-  //Gets pokemon game
+  //Gets pokemon name
   public String getPkmName(){
    return pkmName; 
   }
   
-  //Gets pokemon Hp
-  public int getHp(){
-   return hp; 
-  }
-  //Sets Pokemon Hp (will prolly be useful when doing items)
-  public void setHp(int newHp){
-    hp = newHp;
-  }
-  
-  //returns the maxHp(will also prolly be important when doing items)
-  public int getMaxHp(){
-   return maxHp; 
-  }
-  
-  //Gets all the moves associated with a pokemon
+  //Gets the move attributes a pokemon is about to use 
+  //It does this by getting the move being used from the arraylist and then getting its attributes(getAtk)
   public String[] getMove(int index){
-    return (moves.get(index)).getAtk();
+    return (moves.get(index)).getMoveAttributes();
   }
   
-  //Returns just one move Name
+    //Returns just one move Name
   public String getMoveName(int index){
-   return (moves.get(index)).getAtkName();
+   return (moves.get(index)).getMoveName();
   }
   
   //Determines the # of moves a pkmn has(all of them have 4)
@@ -73,18 +60,23 @@ public class Pokemon{
    return numAtks; 
   }
   
-  //Determines defense stat(may also be useful when doing items)
-  public int getDefense(){
-   return defense; 
-  }
-  
   //Used to get the pkm type (Will be important when doing weakness)
   public String getType(){
    return pkmType; 
   }
   
-  //NOTE: Will be used to get the move enrgy but ignore this method for now
+  //Gets resistance of pokemon
+  public String getResistance(){
+   return resistance; 
+  }
+  
+  //Gets weakness of pokemon
+  public String getWeakness(){
+   return weakness; 
+  }
+  
+  //Gets the energy of the move
   public int getMoveEnergy(int index){
-    return (moves.get(index)).getEnergy();
+    return (moves.get(index)).getMoveCost();
   }
 }
