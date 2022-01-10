@@ -1,3 +1,2 @@
-# Rayyan Amir Java Projects
+# Rayyan Amir Coding Projects
 
-Welcome to my GitHub!
